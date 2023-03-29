@@ -3,7 +3,8 @@ FROM ubuntu:22.10
 # get-pip.pyなどの一時ファイルはここに置くことを推奨されている
 WORKDIR /tmp
 
-# dockerはrootユーザーで実行するため、AtCoderのサーバと違い、sudoがつかないことに注意
+# dockerコンテナ内では基本コマンドがrootユーザーで実行されるため、
+# AtCoderのサーバでの環境構築と違い、sudoがつかないことに注意
 RUN apt update
 # software-properties-common : add-apt-repository用
 # git : ac-library-pythonのインストールなどに使う

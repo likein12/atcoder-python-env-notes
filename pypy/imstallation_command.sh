@@ -16,7 +16,7 @@ sudo apt install -y pypy3
 # sudo apt install -y wget
 
 # pipを使えるようにする
-sudo wget https://bootstrap.pypa.io/get-pip.py
+wget https://bootstrap.pypa.io/get-pip.py
 sudo pypy3 get-pip.py
 # numpyなど各種ライブラリを入れるのに必要
 sudo apt install -y pypy3-dev
