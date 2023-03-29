@@ -10,13 +10,15 @@ RUN apt update
 # git : ac-library-pythonのインストールなどに使う
 RUN apt-get install -y software-properties-common git
 
+# 普通にsudo apt install pypyでインストールすると7.3.1がインストールされるので
+# 下記のようにインストール
 # PPA https://launchpad.net/~pypy/+archive/ubuntu/ppa
 # 7.3.11+dfsg-1~ppa1~ubuntu22.10が入る
 RUN add-apt-repository -y ppa:pypy/ppa
 RUN apt update
 RUN apt install -y pypy3
 
-# ジャッジサーバの仕様がわからないけれど、wgetはデフォルトで入ってそう？
+#wgetはジャッジサーバではデフォルトで入ってそう？
 # ubuntuのdocker imageには入っていない
 RUN apt install -y wget
 # pipを使えるようにする

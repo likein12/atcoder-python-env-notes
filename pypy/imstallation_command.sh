@@ -6,13 +6,15 @@ sudo apt update
 # git : ac-library-pythonのインストールなどに使う
 sudo apt-get install -y software-properties-common git
 
+# 普通にsudo apt install pypyでインストールすると7.3.1がインストールされるので
+# 下記のようにインストール
 # PPA https://launchpad.net/~pypy/+archive/ubuntu/ppa
 # 7.3.11+dfsg-1~ppa1~ubuntu22.10が入る
 sudo add-apt-repository -y ppa:pypy/ppa
 sudo apt update
 sudo apt install -y pypy3
 
-# ジャッジサーバの仕様がわからないけれど、wgetはデフォルトで入ってそう？なのでスキップ
+# wgetはデフォルトで入ってそうなのでスキップ
 # sudo apt install -y wget
 
 # pipを使えるようにする
