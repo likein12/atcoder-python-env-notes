@@ -19,7 +19,7 @@ sudo apt install -y pypy3
 
 # pipを使えるようにする
 wget https://bootstrap.pypa.io/get-pip.py
-sudo pypy3 get-pip.py
+pypy3 get-pip.py
 # numpyなど各種ライブラリを入れるのに必要
 sudo apt install -y pypy3-dev
 sudo apt install -y gcc g++ gfortran libopenblas-dev liblapack-dev pkg-config libgeos-dev
